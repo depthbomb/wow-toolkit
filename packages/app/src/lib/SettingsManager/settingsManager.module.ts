@@ -1,4 +1,4 @@
-import { app, shell } from 'electron';
+import { app, dialog, shell } from 'electron';
 import { IpcChannel } from 'shared';
 import { SettingsManager } from './settingsManager';
 import { SettingsFileProvider } from './settingsFileProvider';
@@ -40,7 +40,14 @@ export class SettingsManagerModule {
 		);
 		ipc.registerHandler(
 			IpcChannel.Settings_OpenFile,
-			async () => await shell.openExternal(settingsFileProvider.settingsFilePath)
+			async () => {
+				await dialog.showMessageBox(windowManager.getMainWindow()!, {
+					type: 'info',
+					title: 'Open settings file',
+					message: 'Manually editing the settings file is discouraged.\nHowever if you wish to continue then you will need to restart the app after making changes to the file.'
+				});
+				await shell.openExternal(settingsFileProvider.settingsFilePath);
+			}
 		);
 
 		eventSubscriber.subscribe('settings-updated', ({ key, value }) => windowManager.emitAll(IpcChannel.Settings_Changed, key, value));
