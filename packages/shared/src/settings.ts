@@ -4,6 +4,8 @@ export enum SettingsKey {
 	MinimizeToTray = 'App.minimizeToTray',
 	CloseToTray    = 'App.closeToTray',
 	//
+	ExpandSidebar = 'Ui.expandSidebar',
+	//
 	ClientId              = 'BlizzardApi.clientId',
 	ClientSecret          = 'BlizzardApi.clientSecret',
 	AccessToken           = 'BlizzardApi.accessToken',

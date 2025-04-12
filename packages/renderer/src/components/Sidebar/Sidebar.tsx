@@ -1,6 +1,7 @@
 import clsx from 'clsx/lite';
 import Icon from '@mdi/react';
-import { useState } from 'react';
+import { useSetting } from '~/hooks';
+import { SettingsKey } from 'shared';
 import { SidebarButton } from './SidebarButton';
 import { mdiArrowExpandLeft, mdiArrowExpandRight } from '@mdi/js';
 import type { FC } from 'react';
@@ -17,7 +18,7 @@ const sidebarBaseCss = 'pb-2 px-2 h-full flex flex-col items-center justify-betw
 const expanderBaseCss = 'flex items-center text-gray-400 hover:text-white hover:bg-gray-900 rounded-lg transition-colors' as const;
 
 export const Sidebar: FC = () => {
-	const [expanded, setExpanded] = useState(false);
+	const [expanded, setExpanded] = useSetting<boolean>(SettingsKey.ExpandSidebar, { defaultValue: false });
 
 	const sidebarCss = clsx(
 		sidebarBaseCss,
