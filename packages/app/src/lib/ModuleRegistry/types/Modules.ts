@@ -4,14 +4,12 @@ import type { Flags } from '~/lib/Cli';
 import type { typeFlag } from 'type-flag';
 import type { AutoStart } from '~/lib/AutoStart';
 import type { BlizzardApi } from '~/lib/BlizzardApi';
-import type { ThemeManager } from '~/lib/ThemeManager';
 import type { FirstRun } from '~/lib/FirstRun/firstRun';
 import type { WindowManager } from '~/lib/WindowManager';
 import type { Notifications } from '~/lib/Notifications';
 import type { EventSubscriber } from '~/lib/EventSubscriber';
 import type { SettingsManager } from '~/lib/SettingsManager';
 import type { StoreFactory } from '~/lib/Store/store.factory';
-import type { WindowPositioner } from '~/lib/WindowPositioner';
 import type { Events, EventEmitter } from '~/lib/EventEmitter';
 import type { HttpClientManager } from '~/lib/HttpClientManager';
 
@@ -29,7 +27,5 @@ export type Modules = {
 	Notifications: Notifications;
 	SettingsManager: SettingsManager;
 	StoreFactory: StoreFactory;
-	ThemeManager: ThemeManager;
 	WindowManager: WindowManager;
-	WindowPositioner: WindowPositioner;
 };

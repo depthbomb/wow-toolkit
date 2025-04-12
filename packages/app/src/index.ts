@@ -66,7 +66,6 @@ app.whenReady().then(async () => {
 	lib.AutoStartModule.bootstrap(moduleRegistry);
 	lib.SettingsManagerModule.bootstrap(moduleRegistry);
 	lib.HttpClientManagerModule.bootstrap(moduleRegistry);
-	lib.WindowPositionerModule.bootstrap(moduleRegistry);
 
 	await lib.FirstRunModule.bootstrap(moduleRegistry);
 	lib.BlizzardApiModule.bootstrap(moduleRegistry);
@@ -77,5 +76,4 @@ app.whenReady().then(async () => {
 	await lib.StartupModule.bootstrap(moduleRegistry);
 	lib.MainWindowModule.bootstrap(moduleRegistry);
 	lib.TrayManagerModule.bootstrap(moduleRegistry);
-	lib.ThemeManagerModule.bootstrap(moduleRegistry);
 });

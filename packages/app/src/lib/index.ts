@@ -14,8 +14,6 @@ export * from './RealmStatus';
 export * from './SettingsManager';
 export * from './Startup';
 export * from './Store';
-export * from './ThemeManager';
 export * from './TrayManager';
 export * from './WindowManager';
-export * from './WindowPositioner';
 export * from './WowToken';

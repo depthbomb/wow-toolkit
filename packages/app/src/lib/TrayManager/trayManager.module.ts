@@ -6,7 +6,6 @@ export class TrayManagerModule {
 	public static bootstrap(moduleRegistry: ModuleRegistry) {
 		const windowManager   = moduleRegistry.get('WindowManager');
 		const settingsManager = moduleRegistry.get('SettingsManager');
-
 		const startHidden     = settingsManager.get<boolean>(SettingsKey.StartHidden);
 		const trayManager     = new TrayManager(windowManager);
 		const mainWindow      = windowManager.getMainWindow()!;
