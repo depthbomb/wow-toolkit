@@ -1,0 +1,47 @@
+{
+	"private": true,
+	"name": "renderer",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"watch": "yarn dev",
+		"build:d": "vite build --mode development",
+		"build:p": "vite build --mode production",
+		"lint": "eslint .",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@fontsource-variable/open-sans": "^5.2.5",
+		"@mdi/js": "^7.4.47",
+		"@mdi/react": "^1.6.1",
+		"@number-flow/react": "^0.5.9",
+		"@radix-ui/react-separator": "^1.1.3",
+		"@radix-ui/react-switch": "^1.1.4",
+		"clsx": "^2.1.1",
+		"date-fns": "^4.1.0",
+		"jotai": "^2.12.2",
+		"react": "^19.1.0",
+		"react-dom": "^19.1.0",
+		"react-router": "^7.5.0",
+		"shared": "workspace:*"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.24.0",
+		"@tailwindcss/vite": "^4.1.3",
+		"@types/react": "^19.1.1",
+		"@types/react-dom": "^19.1.2",
+		"@vitejs/plugin-react-swc": "^3.8.1",
+		"electron": "35.1.5",
+		"eslint": "^9.24.0",
+		"eslint-plugin-react-hooks": "^5.2.0",
+		"eslint-plugin-react-refresh": "^0.4.19",
+		"globals": "^16.0.0",
+		"postcss": "^8.5.3",
+		"sass-embedded": "^1.86.3",
+		"tailwindcss": "^4.1.3",
+		"terser": "^5.39.0",
+		"typescript": "^5.8.3",
+		"typescript-eslint": "^8.29.1",
+		"vite": "^6.2.6"
+	}
+}

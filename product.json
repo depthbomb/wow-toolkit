@@ -1,0 +1,14 @@
+{
+	"version": "0.1.0",
+	"author": "Caprine Logic",
+	"nameLong": "WoW Toolkit",
+	"applicationName": "wtk",
+	"description": "World of Warcraft Toolkit",
+	"mutexName": "wow-toolkit",
+	"dirName": "wtk",
+	"appId": "{{46384CA4-0464-4E71-B636-A31B83585DFD}",
+	"clsid": "27D38DA5-634E-4725-B86E-D27AC9763BDE",
+	"appUserModelId": "CaprineLogic.wtk",
+	"urlProtocol": "wtk",
+	"repoURL": "https://github.com/depthbomb/wow-toolkit"
+}

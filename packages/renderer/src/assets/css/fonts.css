@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'Semplicita Pro';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: local('Semplicita Pro Light'), local('SemplicitaPro-Light'), url('/assets/fonts/Semplicita Pro Light.woff2') format('woff2'), url('/assets/fonts/Semplicita Pro Light.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Semplicita Pro';
+	font-style: italic;
+	font-weight: 300;
+	font-display: swap;
+	src: local('Semplicita Pro Light Italic'), local('SemplicitaPro-LightItalic'), url('/assets/fonts/Semplicita Pro Light Italic.woff2') format('woff2'), url('/assets/fonts/Semplicita Pro Light Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Semplicita Pro';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Semplicita Pro'), url('/assets/fonts/Semplicita Pro.woff2') format('woff2'), url('/assets/fonts/Semplicita Pro.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Semplicita Pro';
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: local('Semplicita Pro Italic'), local('SemplicitaPro-Italic'), url('/assets/fonts/Semplicita Pro Italic.woff2') format('woff2'), url('/assets/fonts/Semplicita Pro Italic.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Semplicita Pro';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: local('Semplicita Pro Bold'), local('SemplicitaPro-Bold'), url('/assets/fonts/Semplicita Pro Bold.woff2') format('woff2'), url('/assets/fonts/Semplicita Pro Bold.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Semplicita Pro';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: local('Semplicita Pro Bold Italic'), local('SemplicitaPro-BoldItalic'), url('/assets/fonts/Semplicita Pro.woff2') format('woff2'), url('/assets/fonts/Semplicita Pro.woff') format('woff');
+}
+
+/** ============================================================================================ **/
+
+@font-face {
+	font-family: 'Blizz Quadrata';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url('/assets/fonts/Blizz Quadrata.eot');
+	src: url('/assets/fonts/Blizz Quadrata.woff2') format('woff2'), url('/assets/fonts/Blizz Quadrata.woff') format('woff'), url('/assets/fonts/Blizz Quadrata.svg#BlizQuadrataWeb') format('svg'), url('/assets/fonts/Blizz Quadrata.ttf') format('truetype');
+}
