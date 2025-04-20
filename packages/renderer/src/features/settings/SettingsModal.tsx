@@ -1,14 +1,16 @@
 import Icon from '@mdi/react';
 import { mdiCog } from '@mdi/js';
+import { Separator } from 'radix-ui';
 import { Modal } from '~/components/Modal';
 import { Anchor } from '~/components/Anchor';
-import { Separator } from '@radix-ui/react-separator';
 import { ResetsSection } from './components/ResetsSection';
 import { BeledarSection } from './components/BeledarSection';
 import { WowTokenSection } from './components/WowTokenSection';
 import { ApplicationSection } from './components/ApplicationSection';
 import { BlizzardApiSection } from './components/BlizzardApiSection';
 import type { FC } from 'react';
+
+const Hr = () => <Separator.Root className="my-6 bg-gray-700 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"/>;
 
 export const SettingsModal: FC = () => {
 	return (
@@ -24,15 +26,15 @@ export const SettingsModal: FC = () => {
 		}>
 			<div className="space-y-4 flex flex-col">
 				<ApplicationSection/>
-				<Separator className="my-6 bg-gray-700 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"/>
+
 				<BlizzardApiSection/>
-				<Separator className="my-6 bg-gray-700 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"/>
+				<Hr/>
 				<WowTokenSection/>
-				<Separator className="my-6 bg-gray-700 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"/>
+				<Hr/>
 				<BeledarSection/>
-				<Separator className="my-6 bg-gray-700 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"/>
+				<Hr/>
 				<ResetsSection/>
-				<Separator className="my-6 bg-gray-700 data-[orientation=horizontal]:h-px data-[orientation=horizontal]:w-full"/>
+				<Hr/>
 				<Anchor onClick={window.api.openSettingsFile} className="text-sm cursor-pointer">Open settings file</Anchor>
 			</div>
 		</Modal>

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import { memo } from 'react';
 import Icon from '@mdi/react';
+import { Separator } from 'radix-ui';
 import { Tooltip } from '~/components/Tooltip';
-import { Separator } from '@radix-ui/react-separator';
 import { mdiLock, mdiCheck, mdiClose } from '@mdi/js';
 import type { FC } from 'react';
 import type { Realm, Nullable, RealmLockStatus } from 'shared';
@@ -26,7 +26,7 @@ const StatusIcon: FC<{ online: boolean; realmLockStatus: Nullable<RealmLockStatu
 });
 
 const Divider = memo(() => {
-	return <Separator orientation="vertical" className="bg-gray-900 data-[orientation=vertical]:h-8 data-[orientation=vertical]:w-[1px] shrink-0"/>
+	return <Separator.Root orientation="vertical" className="bg-gray-900 data-[orientation=vertical]:h-8 data-[orientation=vertical]:w-[1px] shrink-0"/>
 });
 
 export const RealmRow: FC<RealmRowProps> = memo(({ realm }) => {

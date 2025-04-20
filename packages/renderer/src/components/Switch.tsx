@@ -1,17 +1,16 @@
-import { Root, Thumb } from '@radix-ui/react-switch';
+import { Switch as SwitchPrimitive } from 'radix-ui';
 import type { FC } from 'react';
-import type { SwitchProps as RSwitchProps } from '@radix-ui/react-switch';
 
-type SwitchProps = RSwitchProps & {
+type SwitchProps = SwitchPrimitive.SwitchProps & {
 	label?: string;
 };
 
 export const Switch: FC<SwitchProps> = ({ label, checked, ...props }) => {
 	return (
 		<div className="space-x-3 flex items-center">
-			<Root checked={checked} className="relative h-6 w-12 cursor-default rounded-full bg-red-600 outline-none data-[state=checked]:bg-brand-400 transition-colors" {...props}>
-				<Thumb className="block size-5 translate-x-0.5 rounded-full bg-white transition-transform will-change-transform data-[state=checked]:translate-x-6.5" />
-			</Root>
+			<SwitchPrimitive.Root checked={checked} className="relative h-6 w-12 cursor-default rounded-full bg-red-600 outline-none data-[state=checked]:bg-brand-400 transition-colors" {...props}>
+				<SwitchPrimitive.Thumb className="block size-5 translate-x-0.5 rounded-full bg-white transition-transform will-change-transform data-[state=checked]:translate-x-6.5" />
+			</SwitchPrimitive.Root>
 			{label && <span>{label}</span>}
 		</div>
 	);
