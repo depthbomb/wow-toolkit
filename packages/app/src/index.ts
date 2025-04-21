@@ -1,7 +1,9 @@
 import { join } from 'node:path';
 import { product } from 'shared';
 import { fileExists } from './utils';
+import { Container } from '@needle-di/core';
 import { app, Menu, shell } from 'electron';
+import { MainService } from './services/main';
 import { mkdir, unlink, readFile } from 'node:fs/promises';
 import { EXE_PATH, MONOREPO_ROOT_PATH } from './constants';
 
@@ -53,27 +55,5 @@ app.whenReady().then(async () => {
 		}
 	}
 
-	const lib            = await import('~/lib');
-	const moduleRegistry = lib.ModuleRegistryModule.bootstrap();
-
-	lib.CliModule.bootstrap(moduleRegistry);
-	lib.IpcModule.bootstrap(moduleRegistry);
-	lib.StoreModule.bootstrap(moduleRegistry);
-	lib.NotificationsModule.bootstrap(moduleRegistry);
-	lib.WindowManagerModule.bootstrap(moduleRegistry);
-	lib.EventEmitterModule.bootstrap(moduleRegistry);
-	lib.EventSubscriberModule.bootstrap(moduleRegistry);
-	lib.AutoStartModule.bootstrap(moduleRegistry);
-	lib.SettingsManagerModule.bootstrap(moduleRegistry);
-	lib.HttpClientManagerModule.bootstrap(moduleRegistry);
-
-	await lib.FirstRunModule.bootstrap(moduleRegistry);
-	lib.BlizzardApiModule.bootstrap(moduleRegistry);
-	lib.BeledarModule.bootstrap(moduleRegistry);
-	lib.WowTokenModule.bootstrap(moduleRegistry);
-	lib.RealmStatusModule.bootstrap(moduleRegistry);
-
-	await lib.StartupModule.bootstrap(moduleRegistry);
-	lib.MainWindowModule.bootstrap(moduleRegistry);
-	lib.TrayManagerModule.bootstrap(moduleRegistry);
+	await new Container().get(MainService).boot();
 });

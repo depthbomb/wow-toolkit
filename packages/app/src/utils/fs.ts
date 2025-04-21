@@ -84,12 +84,3 @@ export function getExtraFilePath(path: string) {
 
 	return extraFilePath;
 }
-
-export async function touch(path: string) {
-	const exists = await fileExists(path);
-	if (exists) {
-		throw new Error('File already exists at path \"${path}\"');
-	}
-
-	await writeFile(path, '', 'utf8');
-}

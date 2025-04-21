@@ -1,12 +1,10 @@
 export enum IpcChannel {
 	ShowMessageBox   = 'show-message-box',
-	// Window channels
-	Window_Minimize  = 'window:minimize',
-	Window_Maximize  = 'window:maximize',
-	Window_Restore   = 'window:restore',
-	Window_Close     = 'window:close',
-	Window_IsBlurred = 'window:is-blurred',
-	Window_IsFocused = 'window:is-focused',
+	// Main Window channels
+	MainWindow_Minimize = 'main-window:minimize',
+	MainWindow_Maximize = 'main-window:maximize',
+	MainWindow_Restore  = 'main-window:restore',
+	MainWindow_Close    = 'main-window:close',
 	// Settings channels
 	Settings_Get      = 'settings:get',
 	Settings_Set      = 'settings:set',

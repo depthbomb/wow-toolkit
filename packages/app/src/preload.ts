@@ -65,16 +65,16 @@ const coreApi = {
 		return ipcRenderer.invoke(IpcChannel.ShowMessageBox, options);
 	},
 	minimizeWindow() {
-		return ipcRenderer.invoke(IpcChannel.Window_Minimize);
+		return ipcRenderer.invoke(IpcChannel.MainWindow_Minimize);
 	},
 	maximizeWindow() {
-		return ipcRenderer.invoke(IpcChannel.Window_Maximize);
+		return ipcRenderer.invoke(IpcChannel.MainWindow_Maximize);
 	},
 	restoreWindow() {
-		return ipcRenderer.invoke(IpcChannel.Window_Restore);
+		return ipcRenderer.invoke(IpcChannel.MainWindow_Restore);
 	},
 	closeWindow() {
-		return ipcRenderer.invoke(IpcChannel.Window_Close);
+		return ipcRenderer.invoke(IpcChannel.MainWindow_Close);
 	},
 	//
 	getSettingsValue(key: SettingsKey, defaultValue?: any, secure: boolean = false) {

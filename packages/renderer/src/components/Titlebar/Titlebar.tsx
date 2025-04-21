@@ -1,12 +1,11 @@
 import { useIpc } from '~/hooks';
 import { IpcChannel } from 'shared';
+import logo from '~/assets/img/logo.svg';
 import { useState, useEffect } from 'react';
 import { TitlebarButton } from './TitlebarButton';
+import { AboutModal } from '~/features/about/AboutModal';
 import { SettingsModal } from '~/features/settings/SettingsModal';
 import type { FC } from 'react';
-
-import logo from '~/assets/img/logo.svg';
-import { AboutModal } from '~/features/about/AboutModal';
 
 export const Titlebar: FC = () => {
 	const [isMaximized, setIsMaximized] = useState(false);
