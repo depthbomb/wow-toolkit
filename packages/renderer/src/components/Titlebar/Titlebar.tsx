@@ -9,8 +9,8 @@ import type { FC } from 'react';
 
 export const Titlebar: FC = () => {
 	const [isMaximized, setIsMaximized] = useState(false);
-	const [,onWindowMaximized]          = useIpc(IpcChannel.Window_Maximize);
-	const [,onWindowRestored]           = useIpc(IpcChannel.Window_Restore);
+	const [,onWindowMaximized]          = useIpc(IpcChannel.MainWindow_Maximize);
+	const [,onWindowRestored]           = useIpc(IpcChannel.MainWindow_Restore);
 
 	useEffect(() => {
 		onWindowMaximized(() => setIsMaximized(true));

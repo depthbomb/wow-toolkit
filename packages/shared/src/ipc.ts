@@ -1,5 +1,5 @@
 export enum IpcChannel {
-	ShowMessageBox   = 'show-message-box',
+	ShowMessageBox = 'show-message-box',
 	// Main Window channels
 	MainWindow_Minimize = 'main-window:minimize',
 	MainWindow_Maximize = 'main-window:maximize',
