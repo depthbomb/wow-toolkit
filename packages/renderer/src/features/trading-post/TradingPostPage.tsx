@@ -13,7 +13,7 @@ export const TradingPostPage = () => {
 	return (
 		<div className="space-y-4 size-full flex flex-col items-center justify-center">
 			<div className={bannerCss} role="banner">
-				<h1 className="text-[size:5vw] font-serif font-bold tracking-wider text-shadow-lg">Trading Post cycles in {nextMonthDistance}</h1>
+				<h1 className="text-[size:4.3vw] font-serif font-bold tracking-wider text-shadow-lg">Trading Post cycles in {nextMonthDistance}</h1>
 			</div>
 		</div>
 	);
