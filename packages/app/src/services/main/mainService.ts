@@ -2,6 +2,7 @@ import { dialog } from 'electron';
 import { IpcChannel } from 'shared';
 import { IpcService } from '~/services/ipc';
 import { TrayService } from '~/services/tray';
+import { ThemeService } from '~/services/theme';
 import { WindowService } from '~/services/window';
 import { BeledarService } from '~/services/beledar';
 import { inject, injectable } from '@needle-di/core';
@@ -20,6 +21,7 @@ export class MainService {
 		private readonly lifecycle   = inject(LifecycleService),
 		private readonly ipc         = inject(IpcService),
 		private readonly window      = inject(WindowService),
+		private readonly theme       = inject(ThemeService),
 		private readonly settings    = inject(SettingsService),
 		private readonly firstRun    = inject(FirstRunService),
 		private readonly autoStart   = inject(AutoStartService),
@@ -33,8 +35,9 @@ export class MainService {
 	public async boot() {
 		await this.firstRun.performFirstRunTasks();
 
-		Promise.allSettled([
+		await Promise.allSettled([
 			this.lifecycle.bootstrap(),
+			this.theme.bootstrap(),
 			this.settings.bootstrap(),
 			this.autoStart.bootstrap(),
 			this.mainWindow.bootstrap(),
@@ -42,8 +45,9 @@ export class MainService {
 			this.wowToken.bootstrap(),
 			this.beledar.bootstrap(),
 			this.realmStatus.bootstrap(),
-		])
-		.then(() => this.lifecycle.phase = LifecyclePhase.Ready);
+		]);
+
+		this.lifecycle.phase = LifecyclePhase.Ready;
 
 		this.ipc.registerHandler(IpcChannel.ShowMessageBox, async (_, options: MessageBoxOptions) => await dialog.showMessageBox(this.window.getMainWindow()!, options));
 	}

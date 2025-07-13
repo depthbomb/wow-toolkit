@@ -1,5 +1,6 @@
 import { lazy } from 'react';
 import { Shell } from './components/Shell';
+import { useAccentColor } from './hooks/useAccentColor';
 import { Route, Routes, MemoryRouter } from 'react-router';
 
 // Service components
@@ -18,6 +19,8 @@ const TradingPostPage = lazy(() => import('./features/trading-post/TradingPostPa
 const TimeRiftPage = lazy(() => import('./features/time-rift/TimeRiftPage'));
 
 export const App = () => {
+	useAccentColor();
+
 	return (
 		<MemoryRouter>
 			<Shell>

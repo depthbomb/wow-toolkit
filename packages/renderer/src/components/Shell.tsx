@@ -4,7 +4,7 @@ import type { FC, PropsWithChildren } from 'react';
 
 export const Shell: FC<PropsWithChildren> = ({ children }) => {
 	return (
-		<main className="w-screen h-screen flex flex-col bg-gray-800 border border-gray-950">
+		<main className="w-screen h-screen flex flex-col bg-gray-800 border border-accent-500">
 			<Titlebar/>
 			<div className="relative flex">
 				<div id="portal"/>
